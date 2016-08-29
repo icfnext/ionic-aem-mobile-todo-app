@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/content/mobileapps/todo-mobile-app">
+        <exclude pattern="/content/mobileapps/todo-mobile-app/en/application(/.*)?" />
+    </filter>
+    <filter root="/apps/todo-mobile-app" />
+    <filter root="/etc/designs/todo-mobile-app">
+        <exclude pattern="/etc/designs/todo-mobile-app/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/etc/clientlibs/todo-mobile-app"/>
+    <filter root="/etc/packages/ionic-aem-apps"/>
+
+</workspaceFilter>

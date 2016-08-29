@@ -1,0 +1,9 @@
+<sly data-sly-use.applicationState="com.icfolson.cid10.todo.mobile.components.page.state.State">
+    <div data-sly-test="${!isIonicAemAppMode}" view-title="${currentPage.title}" data-statename="${currentPage.name}" data-sly-attribute.class="${applicationState.stateClass}">
+        <sly data-sly-resource="${'ion-content' @ resourceType='ionic-aem-apps/components/content/ioncontent'}"/>
+    </div>
+
+    <ion-view data-sly-test="${isIonicAemAppMode}" view-title="${currentPage.title}" data-statename="${currentPage.name}" data-sly-attribute.class="${applicationState.stateClass}">
+        <sly data-sly-resource="${'ion-content' @ resourceType='ionic-aem-apps/components/content/ioncontent'}"/>
+    </ion-view>
+</sly>

@@ -1,0 +1,44 @@
+<section data-sly-use.todolist="${component.properties['className']}" ng-controller="TodoListCtrl">
+    <form data-sly-test="${isIonicAemAppMode}" class="list">
+        <ion-item ng-repeat="item in data.list.items"
+                  on-swipe-right="actions.interact( item )">
+            <ion-checkbox ng-model="item.done"
+                          ng-checked="item.done"
+                          ng-change="actions.toggleItem( data.list.id, item.id )">
+                <ion-delete-button class="ion-minus-circled" ng-show="item.interacting" ng-click="actions.removeItem( data.list.id, item.id )"></ion-delete-button>
+                {{item.name}}
+            </ion-checkbox>
+        </ion-item>
+    </form>
+    <form data-sly-test="${!isIonicAemAppMode}" class="list">
+        <!--/* Static Markup coppied from a rendered ion-checkbox directive */-->
+        <label class="item item-checkbox">
+            <div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+                <input type="checkbox" class="ng-pristine ng-untouched">
+                <i class="checkbox-icon"></i>
+            </div>
+            <div class="item-content disable-pointer-events">
+                <span class="ng-binding">Item 1</span>
+            </div>
+        </label>
+        <label class="item item-checkbox">
+            <div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+                <input type="checkbox" class="ng-pristine ng-untouched">
+                <i class="checkbox-icon"></i>
+            </div>
+            <div class="item-content disable-pointer-events">
+                <span class="ng-binding">Item 2</span>
+            </div>
+        </label>
+        <label class="item item-checkbox">
+            <div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+                <input type="checkbox" class="ng-pristine ng-untouched">
+                <i class="checkbox-icon"></i>
+            </div>
+            <div class="item-content disable-pointer-events">
+                <span class="ng-binding">Item 3</span>
+            </div>
+        </label>
+    </form>
+    <button type="button" class="button add-button" ng-click="actions.openListModal()">Add Item</button>
+</section>

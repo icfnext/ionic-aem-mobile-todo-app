@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:designPath="/etc/designs/todo-mobile-app"
+            cq:lastModified="{Date}2015-07-10T14:14:36.050-04:00"
+            cq:lastModifiedBy="admin"
+            cq:template="/apps/todo-mobile-app/templates/content-sync"
+            jcr:language="en_US"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="TODO Mobile App App - Content Sync"
+            sling:resourceType="todo-mobile-app/components/page/content-sync"
+            pageTitle="TODO Mobile App App - Content Sync" />
+</jcr:root>

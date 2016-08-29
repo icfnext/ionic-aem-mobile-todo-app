@@ -1,0 +1,15 @@
+<sly data-sly-include="set-content-type.jsp"></sly>
+<sly data-sly-use.application="com.icfolson.cid10.todo.mobile.components.page.application.Application">
+    angular.module( '${application.applicationRoot.applicationName}' )
+    .run( function( $ionicPlatform ) {
+
+        $ionicPlatform.ready(function() {
+            window.setTimeout(function () {
+                if ( navigator && navigator.splashscreen ) {
+                    navigator.splashscreen.hide();
+                }
+            }, 1000);
+        });
+
+    });
+</sly>

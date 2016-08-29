@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:ClientLibraryFolder"
+          embed="[todo-mobile-app.core,todo-mobile-app.libraries,todo-mobile-app.errors,todo-mobile-app.services,todo-mobile-app.controllers,todo-mobile-app.styles,todo-mobile-app.components]"
+          categories="[todo-mobile-app.all]"/>

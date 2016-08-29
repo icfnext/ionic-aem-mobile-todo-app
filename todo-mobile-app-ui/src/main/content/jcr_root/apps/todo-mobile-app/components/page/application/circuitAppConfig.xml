@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jcr:root hideLabel="{Boolean}false" xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="cq:Panel" title="Circuit Application">
+
+  <items jcr:primaryType="cq:WidgetCollection">
+    <pathToCircuitWebsite allowBlank="{Boolean}true" escapeAmp="{Boolean}false" fieldLabel="Path to CIRCUIT Website" hideLabel="{Boolean}false" hideTrigger="{Boolean}false" jcr:primaryType="cq:Widget" name="./pathToCircuitWebsite" parBrowse="{Boolean}false" rootPath="/" rootTitle="Websites" showTitleInTree="{Boolean}true" xtype="pathfield"/>
+  </items>
+
+</jcr:root>

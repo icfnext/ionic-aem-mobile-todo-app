@@ -1,0 +1,20 @@
+<section data-sly-use.todolists="${component.properties['className']}" ng-controller="TodoListsCtrl">
+    <ion-list data-sly-test="${isIonicAemAppMode}">
+        <ion-item ng-repeat="list in data.lists" href="{{'${todolists.listPagePathPrefix}' + list.id}}">
+            {{list.title}} <span class="status item-note">{{list.itemsCompleted}}/{{list.itemCount}}</span>
+        </ion-item>
+    </ion-list>
+    <div data-sly-test="${!isIonicAemAppMode}" class="list">
+        <a class="item" href="${todolists.listPageHref}">
+            Lorem ipsum dolor sit <span class="status item-note">3/5</span>
+        </a>
+        <a class="item" href="${todolists.listPageHref}">
+            Consectetur adipiscing elit <span class="status item-note">7/21</span>
+        </a>
+        <a class="item" href="${todolists.listPageHref}">
+            In tincidunt diam sed <span class="status item-note">0/2</span>
+        </a>
+    </div>
+    <button type="button" class="add-button button" ng-click="actions.openListModal()">Add List</button>
+</section>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:designPath="/etc/designs/todo-mobile-app"
+            cq:lastModified="{Date}2015-07-10T16:49:51.266-04:00"
+            cq:lastModifiedBy="admin"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="TODO Mobile App App Shell"
+            sling:resourceType="wcm/foundation/components/page"
+            pge-type="[app-instance]"
+            phonegap-build-exportTemplate="/content/mobileapps/todo-mobile-app/shell/jcr:content/pge-app/IonicAEMApp"
+            phonegap-build-exportTemplate-dev="/content/mobileapps/todo-mobile-app/shell/jcr:content/pge-app/IonicAEMApp-dev"
+            phonegap-exportTemplate="/content/mobileapps/todo-mobile-app/shell/jcr:content/pge-app/app-config">
+        <image
+                jcr:lastModified="{Date}2015-07-10T16:49:51.263-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                fileReference="/content/dam/brucelefebvre/kitchen-sink/thumbnail.png"
+                imageRotate="0"/>
+        <pge-app jcr:primaryType="nt:unstructured">
+            <app-content jcr:primaryType="nt:unstructured">
+                <images/>
+                <phonegap/>
+            </app-content>
+            <app-config/>
+            <app-config-dev/>
+            <IonicAEMApp/>
+            <IonicAEMApp-dev/>
+        </pge-app>
+        <screenshots
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Screenshots"
+                sling:resourceSuperType="sling/collection"
+                sling:resourceType="dam/collection">
+            <sling:members
+                    jcr:primaryType="nt:unstructured"
+                    sling:resources="[]"/>
+        </screenshots>
+    </jcr:content>
+</jcr:root>

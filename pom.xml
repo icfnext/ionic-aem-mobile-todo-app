@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>com.icfolson.aem.library</groupId>
+        <artifactId>aem-library</artifactId>
+        <version>7.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.icfolson.cid10.todo.mobile</groupId>
+    <artifactId>todo-mobile-app</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>TODO Mobile App App</name>
+
+    <modules>
+        <module>todo-mobile-app-core</module>
+        <module>todo-mobile-app-ui</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>citytech-public</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>citytech-public</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <core.artifactId>todo-mobile-app-core</core.artifactId>
+
+        <!-- versions -->
+        <aem-library.version>7.0.0-SNAPSHOT</aem-library.version>
+        <component.plugin.version>4.0.0</component.plugin.version>
+        <ionicapps.version>0.7.0-SNAPSHOT</ionicapps.version>
+        <adobe.aem.apps.library.version>6.0.49-NPR-4558-R008</adobe.aem.apps.library.version>
+
+        <!-- defaults -->
+        <package.skip>true</package.skip>
+        <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
+        <cq.username>admin</cq.username>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <property>
+                    <name>local</name>
+                </property>
+            </activation>
+            <properties>
+                <package.skip>false</package.skip>
+                <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
+                <aem.host.author>localhost</aem.host.author>
+                <aem.host.publish>localhost</aem.host.publish>
+                <aem.port.author>4502</aem.port.author>
+                <aem.port.publish>4503</aem.port.publish>
+                <aem.username.author>admin</aem.username.author>
+                <aem.username.publish>admin</aem.username.publish>
+                <aem.password.author>admin</aem.password.author>
+                <aem.password.publish>admin</aem.password.publish>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>1.3.1</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <nonFilteredFileExtensions>
+                        <nonFilteredFileExtension>png</nonFilteredFileExtension>
+                    </nonFilteredFileExtensions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-core</artifactId>
+                <version>${aem-library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-api</artifactId>
+                <version>${aem-library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-models</artifactId>
+                <version>${aem-library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-ui</artifactId>
+                <version>${aem-library.version}</version>
+                <type>zip</type>
+            </dependency>
+
+            <!-- Component Plugin -->
+            <dependency>
+                <groupId>com.citytechinc.cq.cq-component-plugin</groupId>
+                <artifactId>cq-component-maven-plugin</artifactId>
+                <version>${component.plugin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.citytechinc.cq.cq-component-plugin</groupId>
+                <artifactId>cq-component-annotations</artifactId>
+                <version>${component.plugin.version}</version>
+            </dependency>
+
+            <!-- Ionic AEM Apps -->
+            <dependency>
+                <groupId>com.citytechinc.aem.apps.ionic</groupId>
+                <artifactId>ionic-aem-apps-api</artifactId>
+                <version>${ionicapps.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.citytechinc.aem.apps.ionic</groupId>
+                <artifactId>ionic-aem-apps-core</artifactId>
+                <version>${ionicapps.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.citytechinc.aem.apps.ionic</groupId>
+                <artifactId>ionic-aem-apps-ui</artifactId>
+                <version>${ionicapps.version}</version>
+                <type>zip</type>
+            </dependency>
+
+            <!-- AEM Apps Libraries -->
+            <!-- TODO: Determine if this is needed -->
+            <dependency>
+                <groupId>com.adobe.cq.mobile</groupId>
+                <artifactId>cq-mobile-phonegap-wcm-core</artifactId>
+                <version>${adobe.aem.apps.library.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
+

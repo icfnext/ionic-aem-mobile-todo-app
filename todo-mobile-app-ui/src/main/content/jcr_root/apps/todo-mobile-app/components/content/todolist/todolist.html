@@ -1,15 +1,14 @@
-<section data-sly-use.todolist="${component.properties['className']}" ng-controller="TodoListCtrl">
-    <form data-sly-test="${isIonicAemAppMode}" class="list">
-        <ion-item ng-repeat="item in data.list.items"
-                  on-swipe-right="actions.interact( item )">
-            <ion-checkbox ng-model="item.done"
-                          ng-checked="item.done"
-                          ng-change="actions.toggleItem( data.list.id, item.id )">
-                <ion-delete-button class="ion-minus-circled" ng-show="item.interacting" ng-click="actions.removeItem( data.list.id, item.id )"></ion-delete-button>
-                {{item.name}}
-            </ion-checkbox>
+<section data-sly-use.todolist="${component.properties['className']}" ng-controller="TodoListCtrl" class="todo-list">
+    <ion-list data-sly-test="${isIonicAemAppMode}">
+        <ion-item ng-repeat="item in data.list.items" ng-click="actions.toggleItem( data.list.id, item )" on-hold="actions.selectItem( item )" on-swipe-right="actions.deleteItemIfDone( data.list.id, item )" data-selected="{{item.selected}}" class="item-icon-left">
+            <i ng-class="item.done ? 'icon ion-android-checkbox-outline' : 'icon ion-android-checkbox-outline-blank'"></i>
+            {{item.name}}
+            <div class="item-actions" ng-if="item.selected">
+                <button class="button button-clear icon ion-edit" ng-click="actions.openItemEditor( item )"></button>
+                <button class="button button-clear icon ion-trash-b" ng-click="actions.removeItem( data.list.id, item )"></button>
+            </div>
         </ion-item>
-    </form>
+    </ion-list>
     <form data-sly-test="${!isIonicAemAppMode}" class="list">
         <!--/* Static Markup coppied from a rendered ion-checkbox directive */-->
         <label class="item item-checkbox">
@@ -40,5 +39,5 @@
             </div>
         </label>
     </form>
-    <button type="button" class="button add-button" ng-click="actions.openListModal()">Add Item</button>
+    <button type="button" class="button add-button" ng-click="actions.openItemEditor()">Add Item</button>
 </section>

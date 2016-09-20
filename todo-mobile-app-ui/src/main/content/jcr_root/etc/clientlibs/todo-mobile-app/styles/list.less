@@ -1,0 +1,27 @@
+.todo-list {
+  ion-item {
+
+    &[data-selected="true"] {
+      background-color: #DDD;
+
+      i {
+        opacity: 0;
+      }
+    }
+
+    .item-actions {
+      position: absolute;
+      right: 25px;
+      top: 5px;
+
+      .button {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: 0;
+
+        display: inline-block;
+      }
+    }
+  }
+}

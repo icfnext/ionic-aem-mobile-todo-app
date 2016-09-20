@@ -69,6 +69,17 @@ angular.module( 'com.icfolson.cid10.todo.mobile.services.todolist', [ 'ionic' ] 
             return $q.reject();
         };
 
+        this.updateItem = function( listId, itemId, updates ) {
+            if ( todoLists[ listId ] && todoLists[ listId ].items[ itemId ] ) {
+                todoLists[ listId ].items[ itemId ].name = updates.name;
+
+                saveTodoLists();
+                return $q.when( angular.copy( todoLists[ listId ].items[ itemId ] ) );
+            }
+
+            return $q.reject();
+        };
+
         this.removeItemFromList = function( listId, itemId ) {
             if ( todoLists[ listId ] && todoLists[ listId ].items[ itemId ] ) {
                 delete todoLists[ listId ].items[ itemId ];

@@ -8,9 +8,9 @@
             cq:template="/apps/todo-mobile-app/templates/application"
             jcr:language="en_US"
             jcr:primaryType="cq:PageContent"
-            jcr:title="TODO Mobile App App"
+            jcr:title="TODO Mobile App"
             sling:resourceType="todo-mobile-app/components/page/application"
-            pageTitle="TODO Mobile App App"
+            pageTitle="TODO Mobile App"
             phonegap-contentPackageName="en"
             phonegap-contentSyncConfigPath="/content/mobileapps/todo-mobile-app/en/jcr:content/pge-app/app-config" />
 </jcr:root>

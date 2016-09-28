@@ -6,7 +6,7 @@
             cq:lastModified="{Date}2014-01-06T16:29:05.241-05:00"
             cq:lastModifiedBy="admin"
             jcr:primaryType="cq:PageContent"
-            jcr:title="TODO Mobile App App"
+            jcr:title="TODO Mobile App"
             sling:redirect="true"
             sling:redirectStatus="{Long}302"
             sling:resourceType="foundation/components/redirect"

@@ -6,7 +6,7 @@
             cq:lastModified="{Date}2015-07-10T16:49:51.266-04:00"
             cq:lastModifiedBy="admin"
             jcr:primaryType="cq:PageContent"
-            jcr:title="TODO Mobile App App Shell"
+            jcr:title="TODO Mobile App Shell"
             sling:resourceType="wcm/foundation/components/page"
             pge-type="[app-instance]"
             phonegap-build-exportTemplate="/content/mobileapps/todo-mobile-app/shell/jcr:content/pge-app/IonicAEMApp"

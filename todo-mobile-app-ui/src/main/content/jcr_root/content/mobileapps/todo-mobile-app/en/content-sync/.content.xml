@@ -8,7 +8,7 @@
             cq:template="/apps/todo-mobile-app/templates/content-sync"
             jcr:language="en_US"
             jcr:primaryType="cq:PageContent"
-            jcr:title="TODO Mobile App App - Content Sync"
+            jcr:title="TODO Mobile App - Content Sync"
             sling:resourceType="todo-mobile-app/components/page/content-sync"
-            pageTitle="TODO Mobile App App - Content Sync" />
+            pageTitle="TODO Mobile App - Content Sync" />
 </jcr:root>

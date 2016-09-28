@@ -5,7 +5,7 @@
     cq:lastReplicationAction="Activate"
     jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:ContentSyncConfig"
-    jcr:title="TODO Mobile App App Shell - Dev"
+    jcr:title="TODO Mobile App Shell - Dev"
     sling:resourceType="contentsync/config"
     authorizable="everyone"
     updateUser="admin"/>

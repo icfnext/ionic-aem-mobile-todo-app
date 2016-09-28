@@ -6,7 +6,7 @@
             cq:lastModified="{Date}2015-07-10T16:29:05.241-05:00"
             cq:lastModifiedBy="admin"
             jcr:primaryType="cq:PageContent"
-            jcr:title="TODO Mobile App App English"
+            jcr:title="TODO Mobile App English"
             sling:resourceType="wcm/foundation/components/page"
             pge-type="[app-content]"
             phonegap-exportTemplate="/content/mobileapps/todo-mobile-app/en/jcr:content/pge-app/app-config">

@@ -3,7 +3,7 @@
           xmlns:cq="http://www.day.com/jcr/cq/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="cq:Template"
-          jcr:title="TODO Mobile App App - Application Root"
+          jcr:title="TODO Mobile App - Application Root"
           allowedPaths="/content/mobileapps/todo-mobile-app/en"
           allowedChildren="[/apps/todo-mobile-app/templates/main-state,/apps/todo-mobile-app/templates/state]"
           ranking="0">

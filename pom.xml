@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.icfolson.aem.library</groupId>
         <artifactId>aem-library</artifactId>
-        <version>7.0.0-SNAPSHOT</version>
+        <version>7.0.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -39,9 +39,9 @@
         <core.artifactId>todo-mobile-app-core</core.artifactId>
 
         <!-- versions -->
-        <aem-library.version>7.0.0-SNAPSHOT</aem-library.version>
-        <component.plugin.version>4.0.0</component.plugin.version>
-        <ionicapps.version>0.7.0-SNAPSHOT</ionicapps.version>
+        <aem-library.version>7.0.1</aem-library.version>
+        <component.plugin.version>4.1.2</component.plugin.version>
+        <ionicapps.version>0.7.0</ionicapps.version>
         <adobe.aem.apps.library.version>6.0.49-NPR-4558-R008</adobe.aem.apps.library.version>
 
         <!-- defaults -->

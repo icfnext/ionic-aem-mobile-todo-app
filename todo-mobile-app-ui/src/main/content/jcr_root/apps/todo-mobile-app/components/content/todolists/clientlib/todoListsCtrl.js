@@ -15,14 +15,15 @@ angular.module( 'com.icfolson.cid10.todo.mobile.controllers.todolists', [ 'ionic
         $scope.modal = $ionicModal.fromTemplate(
             '<ion-modal-view>' +
             '   <ion-header-bar class="bar-balanced">' +
+            '       <button class="button button-clear icon ion-close" ng-click="actions.closeListModal()"></button>' +
             '       <h1 class="title">New List</h1>' +
+            '       <button class="button button-clear icon ion-checkmark" ng-click="actions.addList( forms.newList.title )"></button>' +
             '   </ion-header-bar>' +
             '   <ion-content>' +
             '      <form class="list" ng-submit="actions.addList( forms.newList.title )">' +
             '         <label class="item item-input">' +
             '            <input type="text" placeholder="List Title" required ng-model="forms.newList.title">' +
             '         </label>' +
-            '         <button class="button button-block button-positive" type="submit">Create</button>' +
             '      </form>' +
             '   </ion-content>' +
             '</ion-modal-view>', {
@@ -42,6 +43,9 @@ angular.module( 'com.icfolson.cid10.todo.mobile.controllers.todolists', [ 'ionic
             openListModal: function() {
                 $scope.forms.newList.reset();
                 $scope.modal.show();
+            },
+            closeListModal: function() {
+                $scope.modal.hide();
             },
             addList: function( title ) {
                 if ( !title ) {

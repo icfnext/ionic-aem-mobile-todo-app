@@ -20,6 +20,7 @@ angular.module( 'com.icfolson.cid10.todo.mobile.controllers.todolist', [ 'ionic'
         $scope.modal = $ionicModal.fromTemplate(
             '<ion-modal-view>' +
             '   <ion-header-bar class="bar-balanced">' +
+            '       <button class="button button-clear icon ion-close" ng-click="actions.closeItemEditor()"></button>' +
             '       <h1 class="title">New Item</h1>' +
             '       <button class="button button-clear icon ion-checkmark" ng-click="actions.addOrUpdateItem( data.list.id, forms.itemEditor.name )"></button>' +
             '   </ion-header-bar>' +
@@ -53,6 +54,9 @@ angular.module( 'com.icfolson.cid10.todo.mobile.controllers.todolist', [ 'ionic'
                 }
 
                 $scope.modal.show();
+            },
+            closeItemEditor: function() {
+                $scope.modal.hide();
             },
             addOrUpdateItem: function( listId, name ) {
                 if ( !name ) {

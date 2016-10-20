@@ -1,8 +1,11 @@
 <sly data-sly-use.applicationState="com.icfolson.cid10.todo.mobile.components.page.state.State">
-    <ion-nav-bar class="bar-balanced">
+    <ion-nav-bar class="bar-balanced" data-sly-test="${isIonicAemAppMode}">
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
 
+    <div class="bar bar-balanced bar-header" data-sly-test="${!isIonicAemAppMode}">
+        <h1 class="title">${currentPage.title}</h1>
+    </div>
     <sly data-sly-resource="${'mainview' @ resourceType='ionic-aem-apps/components/content/ionnavview'}"/>
 </sly>

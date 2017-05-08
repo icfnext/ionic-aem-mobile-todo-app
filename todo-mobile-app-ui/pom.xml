@@ -141,9 +141,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.citytechinc.maven.plugins</groupId>
-                <artifactId>cq-package-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <groupId>com.icfolson.maven.plugins</groupId>
+                <artifactId>aem-package-maven-plugin</artifactId>
+                <version>0.6.0</version>
                 <executions>
                     <execution>
                         <phase>install</phase>
@@ -153,10 +153,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <host>${cq.host.author}</host>
-                    <port>${cq.port.author}</port>
-                    <username>${cq.username.author}</username>
-                    <password>${cq.password.author}</password>
+                    <host>${aem.host.author}</host>
+                    <port>${aem.port.author}</port>
+                    <username>${aem.username.author}</username>
+                    <password>${aem.password.author}</password>
                     <skip>${package.skip}</skip>
                     <installRecursive>true</installRecursive>
                 </configuration>

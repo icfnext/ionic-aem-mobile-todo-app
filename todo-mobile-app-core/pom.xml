@@ -59,6 +59,7 @@
     </build>
 
     <dependencies>
+        <!-- TODO: Remove
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -167,6 +168,13 @@
 			<groupId>com.adobe.granite.osgi.wrapper</groupId>
 			<artifactId>com.adobe.granite.osgi.wrapper.guava</artifactId>
 		</dependency>
+		-->
+        <!-- uber jar -->
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
+        </dependency>
 
         <!-- AEM library -->
         <dependency>
